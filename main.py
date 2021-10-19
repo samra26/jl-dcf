@@ -69,8 +69,8 @@ if __name__ == '__main__':
     parser.add_argument('--wd', type=float, default=0.0005)  # Weight decay
     parser.add_argument('--momentum', type=float, default=0.99)
     parser.add_argument('--image_size', type=int, default=320)
-    parser.add_argument('--cuda', type=bool, default=False)
-    parser.add_argument('--device_id', type=str, default='cpu')
+    parser.add_argument('--cuda', type=bool, default=True)
+    parser.add_argument('--device_id', type=str, default='cuda:0')
 
     # Training settings
     parser.add_argument('--arch', type=str, default='vgg'
