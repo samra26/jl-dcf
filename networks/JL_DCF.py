@@ -155,7 +155,8 @@ class CMLayer(nn.Module):
         for i in range(len(list_x)):
             part1 = list_x[i][0]
             part2 = list_x[i][1]
-            sum = (part1 + part2 + (part1 * part2)).unsqueeze(dim=0)
+            #sum = (part1 + part2 + (part1 * part2)).unsqueeze(dim=0)
+            sum = (part1 + part2 + (part1 * part2)+ torch.maximum(part1,part2)).unsqueeze(dim=0)
             resl.append(sum)
         return resl
 
